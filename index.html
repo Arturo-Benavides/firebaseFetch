@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <h1>My Brand</h1>
+        <ul>
+            <li><a href="#gallery">Gallery</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="overlay">
+            <h1 class="hero-text">Welcome to My World</h1>
+        </div>
+    </header>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <h2>Gallery</h2>
+        <div id="imageGallery"></div>
+    </section>
+
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

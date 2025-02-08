@@ -13,13 +13,13 @@ function closePopup() {
 
 }
 
-// Modify displayImages() to add the click event to each image
+// Function to fetch and display images in order (newest first)
 function displayImages() {
     console.log("Fetching images...");
     const gallery = document.getElementById('imageGallery');
     gallery.innerHTML = ""; // Clear previous images
 
-    db.collection("images").get()
+    db.collection("images").orderBy("timestamp", "desc").get() // ORDER BY TIMESTAMP
         .then(snapshot => {
             if (snapshot.empty) {
                 console.warn("No images found in Firestore.");
@@ -33,6 +33,8 @@ function displayImages() {
                         img.src = imageData.imageUrl;
                         img.alt = "Fetched from Firestore";
                         img.onclick = () => openPopup(imageData.imageUrl); // Open popup on click
+
+                        // Append to gallery without extra spacing
                         gallery.appendChild(img);
                     } else {
                         console.warn("Document missing imageUrl field:", doc.id);
@@ -45,3 +47,4 @@ function displayImages() {
 
 // Run the function on page load
 document.addEventListener("DOMContentLoaded", displayImages);
+

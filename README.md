@@ -1,5 +1,4 @@
 # firebaseFetch
-# SHOT ON EYEPHONE
 
 This project is a demonstration of my skills in **frontend development, Firebase integration, and real-world data fetching**.
 

@@ -103,21 +103,18 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    color: white;
-    text-align: center;
-    padding: 10px 20px;
-    font-size: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 15px;
     gap: 15px; /* Space between elements */
-    flex-wrap: wrap; /* Allows items to wrap only when necessary */
 }
 
 footer a  {
     text-decoration: none;
+    text-transform: uppercase;
+    font-size: 10px;
     color: white;
-    margin: 0 10px;
     font-family: 'Montserrat', sans-serif;
     transition: color 0.3s ease;
     white-space: nowrap; /* Prevents links from breaking into multiple lines */
@@ -131,14 +128,7 @@ footer a:hover {
 }
 
 /* Ensure footer text adjusts for smaller screens */
-@media (max-width: 500px) {
-    footer {
-        gap: 1px; /* Space between elements */
-        padding: 10px;
-        font-size: 6px;
 
-    }
-}
 
 /* Hero Section */
 .hero {

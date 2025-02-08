@@ -96,18 +96,22 @@ nav a:hover {
     color: white;
     cursor: pointer;
 }
+
+/* Fixed Bottom Footer */
 footer {
-    position: fixed; /* Stays at the bottom */
+    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     color: white;
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    padding: 15px;
+    padding: 10px 20px;
     font-size: 10px;
-    text-decoration: none;
-    z-index: 1000; /* Ensures it's always on top */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Space between elements */
+    flex-wrap: wrap; /* Allows items to wrap only when necessary */
 }
 
 footer a  {
@@ -116,6 +120,8 @@ footer a  {
     margin: 0 10px;
     font-family: 'Montserrat', sans-serif;
     transition: color 0.3s ease;
+    white-space: nowrap; /* Prevents links from breaking into multiple lines */
+
 
 }
 
@@ -124,6 +130,14 @@ footer a:hover {
     color: #dcd6d681; /* Optional: Keep gold color when hovering */
 }
 
+/* Ensure footer text adjusts for smaller screens */
+@media (max-width: 500px) {
+    footer {
+        flex-direction: column; /* Stack items when the screen is too small */
+        gap: 5px; /* Reduce spacing */
+        padding: 8px;
+    }
+}
 
 /* Hero Section */
 .hero {

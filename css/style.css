@@ -133,9 +133,10 @@ footer a:hover {
 /* Ensure footer text adjusts for smaller screens */
 @media (max-width: 500px) {
     footer {
-        flex-direction: column; /* Stack items when the screen is too small */
-        gap: 5px; /* Reduce spacing */
-        padding: 8px;
+        gap: 1px; /* Space between elements */
+        padding: 10px;
+        font-size: 6px;
+
     }
 }
 
@@ -212,9 +213,10 @@ body.terms-page {
 /* Terms & Conditions Page */
 .terms-container {
     max-width: 800px;
-    margin: 100px auto 50px auto; /* Adjust spacing to prevent overlap with navbar/footer */
-    padding: 20px;
+    margin: auto;
+    padding: 100px 20px;
     color: white;
+    text-align: left;
     font-family: 'Montserrat', sans-serif;
 
 }

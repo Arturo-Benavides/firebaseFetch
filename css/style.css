@@ -107,7 +107,7 @@ footer {
     justify-content: center;
     align-items: center;
     padding-bottom: 15px;
-    gap: 15px; /* Space between elements */
+    gap: 5px; /* Space between elements */
     z-index: 1000; /* Keeps it above other elements */
 
 }

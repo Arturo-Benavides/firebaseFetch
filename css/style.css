@@ -430,6 +430,7 @@ form input, form textarea {
 
 button {
     margin-top: 25px;
+    margin-left: 9px;
     padding: 10px 20px;
     background: rgb(176, 175, 167);
     width: 100%;

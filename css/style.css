@@ -305,3 +305,138 @@ body.privacy-page {
     text-decoration: none; /* Ensures no underline on hover */
     color: #dcd6d681; /* Optional: Keep gold color when hovering */}
 
+/* Apply background ONLY to About page */
+body.about-page {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+/* About Page Container */
+.about-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 100px 20px;
+    color: white;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+/* Headings */
+.about-container h1 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 100;
+    letter-spacing: 2px;
+
+
+}
+.about-container h2{
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    padding-top: 30px;  
+
+}
+.about-container a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+
+}
+
+.about-container a:hover {
+    text-decoration: none; /* Ensures no underline on hover */
+    color: #dcd6d681; /* Optional: Keep gold color when hovering */}
+
+/* Apply background ONLY to Contact page */
+body.contact-page {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+/* Contact Page Container */
+.contact-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 100px 20px;
+    color: white;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.contact-container h1{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+
+.contact-container h2{
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    padding-top: 30px;  
+}
+
+.contact-container a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+
+}
+.contact-container a:hover {
+    text-decoration: none; /* Ensures no underline on hover */
+    color: #dcd6d681; /* Optional: Keep gold color when hovering */}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+}
+
+button {
+    margin-top: 25px;
+    padding: 10px 20px;
+    background: rgb(176, 175, 167);
+    width: 100%;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: rgb(44, 43, 43);
+}

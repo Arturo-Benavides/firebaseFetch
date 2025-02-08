@@ -439,6 +439,8 @@ button {
     border: none;
     font-weight: bold;
     cursor: pointer;
+    border-radius: 5px;
+
 }
 
 button:hover {

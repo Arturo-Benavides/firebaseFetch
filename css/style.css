@@ -108,6 +108,8 @@ footer {
     align-items: center;
     padding-bottom: 15px;
     gap: 15px; /* Space between elements */
+    z-index: 1000; /* Keeps it above other elements */
+
 }
 
 footer a  {
@@ -186,16 +188,30 @@ footer a:hover {
 
 /* Apply background ONLY to Terms & Conditions page */
 body.terms-page {
-    position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
-                url('/IMG_1.jpeg') no-repeat center center fixed;
-    background-size: cover;
-    margin: 0;
-    padding: 0;
+    position:absolute;
+    top: 0;
+    left: 0;
     width: 100vw;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+.fixed-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1; /* Push behind content */
+}
+
+.terms-container {
+    position: relative;
+    z-index: 1;
+    color: white;
+    padding: 20px;
 }
 
 
@@ -242,16 +258,14 @@ body.terms-page {
 
     /* Apply background ONLY to Privacy Policy page */
 body.privacy-page {
-    position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
-                url('/IMG_1.jpeg') no-repeat center center fixed;
-    background-size: cover;
-    margin: 0;
-    padding: 0;
+    position:absolute;
+    top: 0;
+    left: 0;
     width: 100vw;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
 }
 
 /* Privacy Policy Container */

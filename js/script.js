@@ -1,50 +1,64 @@
-// Function to open the popup when an image is clicked
-function openPopup(imageSrc) {
-    document.getElementById("popupImage").src = imageSrc;
-    document.getElementById("imagePopup").style.display = "flex";
-    document.body.style.overflow = "hidden"; // Prevent scrolling
+// Function to open the popup when an image or video is clicked
+function openPopup(mediaSrc) {
+    const popup = document.getElementById("imagePopup");
+    const popupContent = document.getElementById("popupContent");
 
+    popupContent.innerHTML = ""; // Clear previous content
+
+    if (mediaSrc.endsWith(".mp4") || mediaSrc.endsWith(".webm") || mediaSrc.endsWith(".ogg")) {
+        const video = document.createElement("video");
+        video.src = mediaSrc;
+        video.autoplay = true;
+        video.loop = true;
+        video.muted = true;
+        video.controls = true;
+
+        popupContent.appendChild(video);
+    } else {
+        const img = document.createElement("img");
+        img.src = mediaSrc;
+        img.alt = "Expanded Image";
+        popupContent.appendChild(img);
+    }
+
+    popup.style.display = "flex";
+    document.body.style.overflow = "hidden";
 }
 
 // Function to close the popup
 function closePopup() {
     document.getElementById("imagePopup").style.display = "none";
-    document.body.style.overflow = "auto"; // Allow scrolling again
-
+    document.body.style.overflow = "auto";
 }
 
-// Function to fetch and display images in order (newest first)
+// Function to fetch and display images/videos in order (newest first)
 function displayImages() {
     console.log("Fetching images...");
     const gallery = document.getElementById('imageGallery');
-    gallery.innerHTML = ""; // Clear previous images
+    gallery.innerHTML = "";
 
-    db.collection("images").orderBy("timestamp", "desc").get() // ORDER BY TIMESTAMP
+    db.collection("images").orderBy("timestamp", "desc").get()
         .then(snapshot => {
             if (snapshot.empty) {
-                console.warn("No images found in Firestore.");
+                console.warn("No media found in Firestore.");
             } else {
                 snapshot.forEach(doc => {
                     const imageData = doc.data();
-                    console.log("Image found:", imageData);
+                    const thumb = document.createElement('img');
+                    const src = imageData.imageUrl;
 
-                    if (imageData.imageUrl) {
-                        const img = document.createElement('img');
-                        img.src = imageData.imageUrl;
-                        img.alt = "Fetched from Firestore";
-                        img.onclick = () => openPopup(imageData.imageUrl); // Open popup on click
-
-                        // Append to gallery without extra spacing
-                        gallery.appendChild(img);
+                    if (src) {
+                        thumb.src = src;
+                        thumb.alt = "Fetched from Firestore";
+                        thumb.onclick = () => openPopup(src);
+                        gallery.appendChild(thumb);
                     } else {
-                        console.warn("Document missing imageUrl field:", doc.id);
+                        console.warn("Missing imageUrl:", doc.id);
                     }
                 });
             }
         })
-        .catch(error => console.error("Error fetching images:", error));
+        .catch(error => console.error("Error fetching media:", error));
 }
 
-// Run the function on page load
 document.addEventListener("DOMContentLoaded", displayImages);
-

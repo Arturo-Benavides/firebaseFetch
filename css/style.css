@@ -80,12 +80,15 @@ nav a:hover {
     z-index: 1000;
 }
 
-/* Image inside popup */
+
+
+.popup video,
 .popup img {
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 90vw;
+    max-height: 90vh;
     border-radius: 10px;
 }
+
 
 /* Close button */
 .popup .close {

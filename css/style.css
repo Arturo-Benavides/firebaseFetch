@@ -1,5 +1,6 @@
 /* Reset & Global Styles */
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     font-family: 'Playfair Display', serif;
@@ -9,22 +10,27 @@ body, html {
 
 /* Navbar */
 nav {
-    position: fixed; /* Keeps the navbar at the top */
+    position: fixed;
+    /* Keeps the navbar at the top */
     top: 0;
     left: 0;
-    width: 100%; /* Makes navbar stretch across the screen */
+    width: 100%;
+    /* Makes navbar stretch across the screen */
     display: flex;
-    justify-content: center; /* Centers the menu links */
+    justify-content: center;
+    /* Centers the menu links */
     align-items: center;
     padding-top: 25px;
-    gap: 50px; /* Space between links */
-    z-index: 1000; /* Keeps it above other elements */
+    gap: 50px;
+    /* Space between links */
+    z-index: 1000;
+    /* Keeps it above other elements */
 }
 
 nav a {
     text-decoration: none;
     color: white;
-    font-size: 18px;
+    font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: color 0.3s ease;
@@ -33,48 +39,66 @@ nav a {
 }
 
 nav a:hover {
-    text-decoration: none; /* Ensures no underline on hover */
-    color: #dcd6d681; /* Optional: Keep gold color when hovering */
+    text-decoration: none;
+    /* Ensures no underline on hover */
+    color: #dcd6d681;
+    /* Optional: Keep gold color when hovering */
 }
 
 
 .left-text {
-    position: fixed; /* Keeps it in the same place even when scrolling */
-    top: 50%; /* Positions it at the middle vertically */
-    left: 25%; /* Positions it at the middle horizontally */
-    transform: translate(-50%, -50%); /* Ensures it's perfectly centered */
-    font-size: 18px; /* Adjust font size */
-    color: white; /* Change as needed */
+    position: fixed;
+    /* Keeps it in the same place even when scrolling */
+    top: 50%;
+    /* Positions it at the middle vertically */
+    left: 25%;
+    /* Positions it at the middle horizontally */
+    transform: translate(-50%, -50%);
+    /* Ensures it's perfectly centered */
+    font-size: 18px;
+    /* Adjust font size */
+    color: white;
+    /* Change as needed */
     text-transform: uppercase;
     letter-spacing: 2px;
-    z-index: 999; /* Ensures it stays above other content */
+    z-index: 999;
+    /* Ensures it stays above other content */
     font-family: 'Montserrat', sans-serif;
 
 }
 
 .right-text {
-    position: fixed; /* Keeps it in the same place even when scrolling */
-    top: 50%; /* Positions it at the middle vertically */
-    left: 75%; /* Positions it at the middle horizontally */
-    transform: translate(-50%, -50%); /* Ensures it's perfectly centered */
-    font-size: 18px; /* Adjust font size */
-    color: white; /* Change as needed */
+    position: fixed;
+    /* Keeps it in the same place even when scrolling */
+    top: 50%;
+    /* Positions it at the middle vertically */
+    left: 75%;
+    /* Positions it at the middle horizontally */
+    transform: translate(-50%, -50%);
+    /* Ensures it's perfectly centered */
+    font-size: 18px;
+    /* Adjust font size */
+    color: white;
+    /* Change as needed */
     text-transform: uppercase;
     letter-spacing: 2px;
-    z-index: 999; /* Ensures it stays above other content */
+    z-index: 999;
+    /* Ensures it stays above other content */
     font-family: 'Montserrat', sans-serif;
 
 }
 
 /* Popup Overlay */
 .popup {
-    display: none; /* Initially hidden */
+    display: none;
+    /* Initially hidden */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    background: rgba(0, 0, 0, 0.8);
+    /* Dark overlay */
     justify-content: center;
     align-items: center;
     z-index: 1000;
@@ -110,26 +134,31 @@ footer {
     justify-content: center;
     align-items: center;
     padding-bottom: 15px;
-    gap: 5px; /* Space between elements */
-    z-index: 1000; /* Keeps it above other elements */
+    gap: 5px;
+    /* Space between elements */
+    z-index: 1000;
+    /* Keeps it above other elements */
 
 }
 
-footer a  {
+footer a {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 10px;
     color: white;
     font-family: 'Montserrat', sans-serif;
     transition: color 0.3s ease;
-    white-space: nowrap; /* Prevents links from breaking into multiple lines */
+    white-space: nowrap;
+    /* Prevents links from breaking into multiple lines */
 
 
 }
 
 footer a:hover {
-    text-decoration: none; /* Ensures no underline on hover */
-    color: #dcd6d681; /* Optional: Keep gold color when hovering */
+    text-decoration: none;
+    /* Ensures no underline on hover */
+    color: #dcd6d681;
+    /* Optional: Keep gold color when hovering */
 }
 
 /* Ensure footer text adjusts for smaller screens */
@@ -170,11 +199,13 @@ footer a:hover {
 #imageGallery {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center images horizontally */
+    align-items: center;
+    /* Center images horizontally */
 }
 
 #imageGallery img {
-    width: 100%; /* Images take up 90% of the screen width */
+    width: 100%;
+    /* Images take up 90% of the screen width */
     /* max-width: 1000px; Prevents images from being too large */
     /* border-radius: 10px; */
 }
@@ -185,13 +216,18 @@ footer a:hover {
 
 /* Animations */
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 /* Apply background ONLY to Terms & Conditions page */
 body.terms-page {
-    position:absolute;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
@@ -200,6 +236,7 @@ body.terms-page {
     background-position: center;
     z-index: -1;
 }
+
 .fixed-img {
     position: fixed;
     top: 0;
@@ -207,7 +244,8 @@ body.terms-page {
     width: 100vw;
     height: 100vh;
     object-fit: cover;
-    z-index: -1; /* Push behind content */
+    z-index: -1;
+    /* Push behind content */
 }
 
 .terms-container {
@@ -255,13 +293,16 @@ body.terms-page {
 }
 
 .terms-container a:hover {
-    text-decoration: none; /* Ensures no underline on hover */
-    color: #dcd6d681; /* Optional: Keep gold color when hovering */}
+    text-decoration: none;
+    /* Ensures no underline on hover */
+    color: #dcd6d681;
+    /* Optional: Keep gold color when hovering */
+}
 
 
-    /* Apply background ONLY to Privacy Policy page */
+/* Apply background ONLY to Privacy Policy page */
 body.privacy-page {
-    position:absolute;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
@@ -305,12 +346,15 @@ body.privacy-page {
 }
 
 .privacy-container a:hover {
-    text-decoration: none; /* Ensures no underline on hover */
-    color: #dcd6d681; /* Optional: Keep gold color when hovering */}
+    text-decoration: none;
+    /* Ensures no underline on hover */
+    color: #dcd6d681;
+    /* Optional: Keep gold color when hovering */
+}
 
 /* Apply background ONLY to About page */
 body.about-page {
-    position:absolute;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
@@ -342,12 +386,14 @@ body.about-page {
 
 
 }
-.about-container h2{
+
+.about-container h2 {
     color: rgb(255, 255, 255);
     font-size: 16px;
-    padding-top: 30px;  
+    padding-top: 30px;
 
 }
+
 .about-container a {
     color: rgb(255, 255, 255);
     text-decoration: none;
@@ -357,12 +403,15 @@ body.about-page {
 }
 
 .about-container a:hover {
-    text-decoration: none; /* Ensures no underline on hover */
-    color: #dcd6d681; /* Optional: Keep gold color when hovering */}
+    text-decoration: none;
+    /* Ensures no underline on hover */
+    color: #dcd6d681;
+    /* Optional: Keep gold color when hovering */
+}
 
 /* Apply background ONLY to Contact page */
 body.contact-page {
-    position:absolute;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
@@ -383,7 +432,7 @@ body.contact-page {
 
 }
 
-.contact-container h1{
+.contact-container h1 {
     color: rgb(255, 255, 255);
     text-align: center;
     font-size: 18px;
@@ -392,22 +441,26 @@ body.contact-page {
     letter-spacing: 2px;
 }
 
-.contact-container h2{
+.contact-container h2 {
     color: rgb(255, 255, 255);
     font-size: 16px;
-    padding-top: 30px;  
+    padding-top: 30px;
 }
 
-.contact-container a{
+.contact-container a {
     color: rgb(255, 255, 255);
     text-decoration: none;
     font-size: 16px;
     transition: color 0.3s ease;
 
 }
+
 .contact-container a:hover {
-    text-decoration: none; /* Ensures no underline on hover */
-    color: #dcd6d681; /* Optional: Keep gold color when hovering */}
+    text-decoration: none;
+    /* Ensures no underline on hover */
+    color: #dcd6d681;
+    /* Optional: Keep gold color when hovering */
+}
 
 /* Form Styling */
 form {
@@ -423,13 +476,15 @@ form label {
     font-weight: bold;
 }
 
-form input, form textarea {
+form input,
+form textarea {
     padding: 10px;
     margin-top: 5px;
     border-radius: 5px;
     border: none;
     width: 100%;
-    font-size: 16px; /* Prevents zooming */
+    font-size: 16px;
+    /* Prevents zooming */
 
 }
 
@@ -449,3 +504,104 @@ button {
 button:hover {
     background: rgb(44, 43, 43);
 }
+
+
+/* Burger Icon */
+.burger {
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+
+#menuToggle {
+  position: fixed;
+
+  font-size: 2rem;
+  background: transparent;
+  border: none;
+  color: white;
+  z-index: 1001;
+  mix-blend-mode: difference; /* This gives the inverted look */
+  cursor: pointer;
+}
+
+
+#menuToggle.close-icon {
+    font-size: 1rem;
+    cursor: pointer;
+    position: fixed;
+    top: 15px;
+    left: 0;
+    z-index: 1001;
+}
+
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    height: 100%;
+    width: 250px;
+    background-color: #070707;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    padding-top: 4rem;
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.sidebar-footer {
+  font-size: 0.75rem; /* smaller text */
+  opacity: 0.7;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sidebar-footer a {
+  font-weight: 500;
+  color: #666;
+  text-decoration: none;
+}
+
+.sidebar-footer a:hover {
+  color: #000;
+}
+
+
+.sidebar.active {
+    left: 0;
+
+}
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.sidebar a:hover {
+    color: rgb(122, 119, 119);
+}
+
+.sidebar hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 1rem 0;
+}
+

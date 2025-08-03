@@ -13,10 +13,25 @@
 </head>
 <body class="terms-page">
 
-    <!-- Navbar -->
-    <nav>
-        <a href="index.html">shot on eyephone</a>
-    </nav>
+    <!-- Burger / Close Icon -->
+    <div id="menuToggle" class="burger" onclick="toggleMenu()">☰</div>
+
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar">
+        <div class="sidebar-content">
+            <a href="index.html">Home</a>
+            <!-- <a href="about.html">About</a> -->
+            <!-- <a href="contact.html">Contact</a> -->
+            <hr />
+            <div class="sidebar-footer">
+                <a href="terms.html">Terms & Conditions</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="https://www.radical16.com">&copy; 2025 RADICAL16, INC.</a>
+
+            </div>
+
+        </div>
+    </div>
     <img src="/IMG_1.jpeg" class="fixed-img" alt="Background Image">
 
     <!-- Main Content -->
@@ -268,10 +283,24 @@
   
     </main>
 
-    <!-- Footer -->
-    <footer>
-        <a href="https://www.radical16.com" >&copy;2025 RADICAL16, INC.</a> | <a  href="terms.html">Terms & Conditions</a> | <a href="privacy.html">Privacy</a>
-    </footer>
+
+        <script>
+        function toggleMenu() {
+            const sidebar = document.getElementById('sidebar');
+            const menuToggle = document.getElementById('menuToggle');
+
+            sidebar.classList.toggle('active');
+
+            if (sidebar.classList.contains('active')) {
+                menuToggle.textContent = 'close';
+                menuToggle.classList.add('close-icon');
+            } else {
+                menuToggle.textContent = '☰';
+                menuToggle.classList.remove('close-icon');
+            }
+        }
+
+    </script>
 
 </body>
 </html>
